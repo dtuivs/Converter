@@ -1,0 +1,680 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>320</width>
+    <height>200</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>320</width>
+    <height>200</height>
+   </size>
+  </property>
+  <property name="mouseTracking">
+   <bool>false</bool>
+  </property>
+  <property name="windowTitle">
+   <string>Convert</string>
+  </property>
+  <property name="windowOpacity">
+   <double>1.000000000000000</double>
+  </property>
+  <property name="autoFillBackground">
+   <bool>true</bool>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QVBoxLayout" name="verticalLayout_2">
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_5">
+      <item>
+       <widget class="QLabel" name="label_3">
+        <property name="text">
+         <string>Category:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QComboBox" name="typeCategoryBox">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <item>
+         <property name="text">
+          <string>Length</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Time</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Temperature</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Volume</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Data</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Number Bases</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <item>
+       <widget class="QLabel" name="inputLabel">
+        <property name="text">
+         <string>Input:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="outputLabel">
+        <property name="text">
+         <string>Ouput:</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="Line" name="line_2">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="inputBox">
+      <property name="sizeConstraint">
+       <enum>QLayout::SetMaximumSize</enum>
+      </property>
+      <item>
+       <widget class="QLineEdit" name="valueA">
+        <property name="whatsThis">
+         <string extracomment="This is where you put your beginning value."/>
+        </property>
+        <property name="clearButtonEnabled">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="valueB">
+        <property name="whatsThis">
+         <string notr="true" extracomment="This is the converted value."/>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        </property>
+        <property name="readOnly">
+         <bool>true</bool>
+        </property>
+        <property name="placeholderText">
+         <string notr="true" extracomment="Output"/>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QWidget" name="lengthTypes" native="true">
+      <layout class="QHBoxLayout" name="horizontalLayout_3">
+       <item>
+        <widget class="QComboBox" name="valueA_type">
+         <item>
+          <property name="text">
+           <string>cm</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>ft</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>in</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>km</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>m</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>mi</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>mm</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>yd</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="valueB_type">
+         <property name="currentIndex">
+          <number>6</number>
+         </property>
+         <item>
+          <property name="text">
+           <string>cm</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>ft</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>in</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>km</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>m</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>mi</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>mm</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>yd</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QWidget" name="timeTypes" native="true">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
+        <widget class="QComboBox" name="valueA_type_time">
+         <item>
+          <property name="text">
+           <string>days</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>hr</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>uS</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>ms</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>min</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>ns</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>sec</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>weeks</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>years</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="valueB_type_time">
+         <property name="currentIndex">
+          <number>6</number>
+         </property>
+         <item>
+          <property name="text">
+           <string>days</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>hr</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>uS</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>ms</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>min</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>ns</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>sec</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>weeks</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>years</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QWidget" name="tempTypes" native="true">
+      <layout class="QHBoxLayout" name="horizontalLayout_4">
+       <item>
+        <widget class="QComboBox" name="valueA_type_temp">
+         <property name="currentIndex">
+          <number>1</number>
+         </property>
+         <item>
+          <property name="text">
+           <string>C</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>F</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>K</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="valueb_type_temp">
+         <item>
+          <property name="text">
+           <string>C</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>F</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>K</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QWidget" name="volumeType" native="true">
+      <layout class="QHBoxLayout" name="volumeTypes">
+       <item>
+        <widget class="QComboBox" name="valueA_type_vol">
+         <item>
+          <property name="text">
+           <string>tsp</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>tbsp</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>gal</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>oz</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>cups</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="valueB_type_vol">
+         <property name="currentIndex">
+          <number>1</number>
+         </property>
+         <item>
+          <property name="text">
+           <string>tsp</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>tbsp</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>gal</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>oz</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>cups</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QWidget" name="dataTypes_2" native="true">
+      <layout class="QHBoxLayout" name="dataTypes">
+       <item>
+        <widget class="QComboBox" name="valueA_type_data">
+         <property name="currentIndex">
+          <number>1</number>
+         </property>
+         <item>
+          <property name="text">
+           <string>bits</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>bytes</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>kilobits</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>kilobytes</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>megabits</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>megabytes</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>gigabits</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>gigabytes</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>terabits</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>terabytes</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="valueB_type_data">
+         <item>
+          <property name="text">
+           <string>bits</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>bytes</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>kilobits</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>kilobytes</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>megabits</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>megabytes</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>gigabits</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>gigabytes</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>terabits</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>terabytes</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QWidget" name="baseNumberTypes" native="true">
+      <layout class="QHBoxLayout" name="horizontalLayout_6">
+       <property name="leftMargin">
+        <number>9</number>
+       </property>
+       <property name="topMargin">
+        <number>9</number>
+       </property>
+       <property name="rightMargin">
+        <number>9</number>
+       </property>
+       <property name="bottomMargin">
+        <number>9</number>
+       </property>
+       <item>
+        <widget class="QComboBox" name="valueA_type_base">
+         <item>
+          <property name="text">
+           <string>Decimal</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Binary</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Hexadecimal</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Octal</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="valueB_type_base">
+         <property name="currentIndex">
+          <number>1</number>
+         </property>
+         <item>
+          <property name="text">
+           <string>Decimal</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Binary</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Hexadecimal</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Octal</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="flip_button">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="text">
+       <string>Flip</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
